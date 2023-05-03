@@ -5,14 +5,13 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import styles from "./../styles/Header.module.css";
 
 function Header() {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
   return (
-    <div className={styles.navBar}>
+    <>
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Offcanvas</Offcanvas.Title>
@@ -23,7 +22,7 @@ function Header() {
         </Offcanvas.Body>
       </Offcanvas>
 
-      <Navbar expand="lg">
+      <Navbar expand="lg" className="fixed-top">
         <Container fluid>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -39,9 +38,15 @@ function Header() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Shop</Nav.Link>
-              <Nav.Link href="#">Contact us</Nav.Link>
+              <Nav.Link href="#action1" className="text-white">
+                Home
+              </Nav.Link>
+              <Nav.Link href="#action2" className="text-white">
+                Shop
+              </Nav.Link>
+              <Nav.Link href="#" className="text-white">
+                Contact us
+              </Nav.Link>
             </Nav>
             <Form className="d-flex">
               <Form.Control
@@ -49,13 +54,14 @@ function Header() {
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
+                style={{ backgroundColor: "#00632d" }}
               />
-              <Button variant="outline-success">Search</Button>
+              <Button style={{ backgroundColor: "#00632d" }}>Search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </div>
+    </>
   );
 }
 
