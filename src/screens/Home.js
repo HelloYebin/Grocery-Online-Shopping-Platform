@@ -28,7 +28,7 @@ const Home = () => {
         <div
           style={{
             backgroundImage: `url(${background})`,
-            width: "55vw",
+            width: "50vw",
             backgroundSize: "100% 100%",
             backgroundRepeat: "no-repeat",
           }}
