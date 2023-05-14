@@ -1,39 +1,41 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./../styles/HomeItemCarousel.module.css";
-import { Button } from "react-bootstrap";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Button } from "react-bootstrap";
 
 const HomeItemCarousel = ({ title, data }) => {
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    centerMode: false,
   };
   return (
     <>
       <div className={styles.carouselContainer}>
-        {/* <div className={styles.carouselHeader}>
-          <p className={styles.carouselTitle}>{title}</p>
+        <div>
           <Button variant="success" className={styles.carouselBtn}>
             View all
           </Button>
-        </div> */}
-        <div>
-          <h2 style={{ textAlign: "center", width: "100%", padding: 30 }}>
-            {title}
-          </h2>
+          <h2 className={styles.containerTitle}>{title}</h2>
           <div>
             <Slider {...settings}>
               {data.map((item, idx) => (
                 <div key={idx}>
-                  <img src={item.src} style={{ width: "80%" }} />
-                  <p>{item.name}</p>
-                  <p>{item.price}</p>
+                  <img
+                    src={item.src}
+                    style={{ width: "100%", padding: "15px" }}
+                    alt="itemImg"
+                  />
+                  <div style={{ padding: "15px" }}>
+                    <span className={styles.itemName}>{item.name}</span>
+                    <p>{item.price}</p>
+                  </div>
                 </div>
               ))}
             </Slider>
