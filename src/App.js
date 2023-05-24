@@ -5,6 +5,7 @@ import Home from "./screens/Home";
 import SignIn from "./screens/SignIn";
 import Register from "./screens/Register";
 import ProductPage from "./screens/ProductPage";
+import AdminSignin from "./screens/AdminSignin";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<SignIn />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/adminSignin" element={<AdminSignin />} />
         <Route path="/salads" element={<ProductPage />} />
       </Routes>
     </BrowserRouter>

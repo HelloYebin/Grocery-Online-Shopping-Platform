@@ -2,17 +2,7 @@ import React from "react";
 import { Button, Form } from "react-bootstrap";
 import { styled } from "styled-components";
 import background from "./../assets/signupImage.png";
-
-const ContainerWithForm = styled.div`
-  background: white;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 95%;
-  height: 95%;
-  padding-top: 55px;
-  display: flex;
-`;
+import { ContainerWithForm } from "../components/AppStyle";
 
 const LeftPanel = styled.div`
   width: 50%;

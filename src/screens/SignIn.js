@@ -3,17 +3,7 @@ import background from "./../assets/loginImage.png";
 import Form from "react-bootstrap/Form";
 import { Button } from "react-bootstrap";
 import { styled } from "styled-components";
-
-const ContainerWithForm = styled.div`
-  background: white;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 95%;
-  height: 95%;
-  padding-top: 55px;
-  display: flex;
-`;
+import { ContainerWithForm } from "../components/AppStyle";
 
 const LeftPanel = styled.div`
   width: 50%;
