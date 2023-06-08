@@ -10,3 +10,13 @@ export const ContainerWithForm = styled.div`
   padding-top: 55px;
   display: flex;
 `;
+
+export const LoginLeftPanel = styled.div`
+  width: 50%;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;

@@ -1,24 +1,14 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
-import { styled } from "styled-components";
 import background from "./../assets/signupImage.png";
-import { ContainerWithForm } from "../components/AppStyle";
-
-const LeftPanel = styled.div`
-  width: 50%;
-  position: relative;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
+import { ContainerWithForm, LoginLeftPanel } from "../components/AppStyle";
+import styles from "./../styles/Register.module.css";
 
 const Register = () => {
   return (
     <div style={{ backgroundColor: "#00632d", height: "100vh" }}>
       <ContainerWithForm>
-        <LeftPanel>
+        <LoginLeftPanel>
           <p className="h1 fw-bold">Welcome!</p>
           <p className="h6">Let's get started with your 14days free trial</p>
           <Form style={{ width: "60%" }}>
@@ -58,23 +48,8 @@ const Register = () => {
           >
             Register
           </Button>
-        </LeftPanel>
-        <div
-          style={{
-            width: "50%",
-            position: "relative",
-            height: "100%",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <img
-            src={background}
-            className="img-fluid"
-            alt="registerImg"
-            style={{ width: "90%", height: "100%" }}
-          ></img>
-        </div>
+        </LoginLeftPanel>
+        <div className={styles.rightContainer}></div>
       </ContainerWithForm>
     </div>
   );

@@ -75,7 +75,7 @@ const ProductPage = () => {
         textAlign: "center",
       }}
     >
-      <p className="h1 fw-bold">Welcome!</p>
+      <p className="h1 fw-bold">Salads Poke</p>
       <ProductContainer>
         {productList.map((item, idx) => (
           <div

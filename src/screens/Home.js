@@ -1,13 +1,12 @@
 import React from "react";
 import styles from "./../styles/Home.module.css";
-import background from "./../assets/mainImage.png";
 import HomeContents from "../components/HomeContents";
 
 const Home = () => {
   return (
     <div style={{ backgroundColor: "#00632d" }}>
-      <div class="d-flex">
-        <div className={styles.container}>
+      <div className="d-flex">
+        <div className={styles.leftContainer}>
           <div
             class="p-3 mb-4 bg-body-tertiary rounded-3 d-flex align-items-center"
             style={{ height: "100vh" }}
@@ -25,14 +24,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div
-          style={{
-            backgroundImage: `url(${background})`,
-            width: "50vw",
-            backgroundSize: "100% 100%",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></div>
+        <div className={styles.rightContainer}></div>
       </div>
       <HomeContents />
     </div>

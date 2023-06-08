@@ -3,23 +3,14 @@ import background from "./../assets/loginImage.png";
 import Form from "react-bootstrap/Form";
 import { Button } from "react-bootstrap";
 import { styled } from "styled-components";
-import { ContainerWithForm } from "../components/AppStyle";
-
-const LeftPanel = styled.div`
-  width: 50%;
-  position: relative;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
+import { ContainerWithForm, LoginLeftPanel } from "../components/AppStyle";
+import styles from "./../styles/SignIn.module.css";
 
 const SignIn = () => {
   return (
     <div style={{ backgroundColor: "#00632d", height: "100vh" }}>
       <ContainerWithForm>
-        <LeftPanel>
+        <LoginLeftPanel>
           <p className="h1 fw-bold">Sign in</p>
 
           <Form
@@ -58,7 +49,7 @@ const SignIn = () => {
               variant="success"
               style={{ fontWeight: "bold", borderRadius: 30, fontSize: 24 }}
             >
-              Sing in
+              Sign in
             </Button>
             <Button
               variant="warning"
@@ -67,17 +58,8 @@ const SignIn = () => {
               Register
             </Button>
           </view>
-        </LeftPanel>
-        <div
-          style={{
-            backgroundImage: `url(${background})`,
-            width: "50%",
-            position: "relative",
-            height: "100%",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "100% 100%",
-          }}
-        ></div>
+        </LoginLeftPanel>
+        <div className={styles.rightContainer}></div>
       </ContainerWithForm>
     </div>
   );
